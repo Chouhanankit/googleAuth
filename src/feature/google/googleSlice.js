@@ -50,7 +50,7 @@ const googleSlice = createSlice({
 export default googleSlice.reducer;
 
 export const fetchUser = createAsyncThunk("USER/GOOGLE", async () => {
-    const response = await axios.get("http://localhost:8080/login/success", { withCredentials: true })
+    const response = await axios.get("https://googleauthbackend.onrender.com/login/success", { withCredentials: true })
     return response.data;
 })
 
